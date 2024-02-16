@@ -1,0 +1,2 @@
+# generativeAI
+ Learning generative AI
