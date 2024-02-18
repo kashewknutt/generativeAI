@@ -2,7 +2,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="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"
+    api_key="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"
 )
 
 chat_completion = client.chat.completions.create(
@@ -12,7 +12,7 @@ chat_completion = client.chat.completions.create(
             "content":"Hello World!!"
         }
     ],
-    model="gpt-4",
+    model="gpt-3.5-turbo",
 )
 
 print(chat_completion.choices[0].message)
