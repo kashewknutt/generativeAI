@@ -4,8 +4,7 @@ from patterns import pattern
 
 
 nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('stopwords')
+
 patterns = pattern()
 
 resources = {
@@ -22,11 +21,12 @@ def respond(user_input):
     # Find the best matching pattern
     for pattern in patterns:
         for keyword in pattern["pattern"].split():
-            if keyword in processed_input:
+            if keyword.lower() in processed_input:
                 # Choose a random response from the matched pattern
                 return random.choice(pattern["responses"])
     # No matching pattern found, offer a default response
     return "I'm still learning, but I couldn't understand your request. Try asking something else or saying 'help'."
+
 
 # Example usage
 while True:

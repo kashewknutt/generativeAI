@@ -98,12 +98,12 @@ def pattern():
             ]
         },
         {
-        "pattern": "I'm struggling with (loneliness|isolation|feeling alone)",
-        "responses": [
-            "I'm sorry to hear that you're going through a tough time. Loneliness can be challenging. How can I support you right now?",
-            "Feeling alone can be really hard. It's okay to reach out for companionship. Is there anything specific on your mind that you'd like to share?",
-            "You're not alone in feeling this way. If you're comfortable, sharing your thoughts and emotions can be a relief. I'm here to listen."
-        ]
+            "pattern": "I'm struggling with (loneliness|isolation|feeling alone)",
+            "responses": [
+                "I'm sorry to hear that you're going through a tough time. Loneliness can be challenging. How can I support you right now?",
+                "Feeling alone can be really hard. It's okay to reach out for companionship. Is there anything specific on your mind that you'd like to share?",
+                "You're not alone in feeling this way. If you're comfortable, sharing your thoughts and emotions can be a relief. I'm here to listen."
+            ]
         },
         {
             "pattern": "I can't handle (stress|pressure|overwhelm)",
@@ -130,12 +130,12 @@ def pattern():
             ]
         },
         {
-        "pattern": "I feel overwhelmed by (responsibilities|workload|expectations)",
-        "responses": [
-            "It sounds like you have a lot on your plate. It's okay to feel overwhelmed. How can I assist you in breaking down these tasks?",
-            "Dealing with high expectations can be challenging. What specific aspects are causing you stress, and is there a way to prioritize or delegate?",
-            "You're not alone in feeling this way. Let's explore together some strategies to manage the workload. What aspects are particularly challenging for you?"
-        ]
+            "pattern": "I feel overwhelmed by (responsibilities|workload|expectations)",
+            "responses": [
+                "It sounds like you have a lot on your plate. It's okay to feel overwhelmed. How can I assist you in breaking down these tasks?",
+                "Dealing with high expectations can be challenging. What specific aspects are causing you stress, and is there a way to prioritize or delegate?",
+                "You're not alone in feeling this way. Let's explore together some strategies to manage the workload. What aspects are particularly challenging for you?"
+            ]
         },
         {
             "pattern": "I'm struggling to (find motivation|stay focused|stay positive)",
