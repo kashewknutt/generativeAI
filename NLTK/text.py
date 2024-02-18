@@ -1,6 +1,7 @@
 import random
 import nltk
 from patterns import pattern
+from talk import listen
 
 
 nltk.download('punkt')
@@ -30,6 +31,6 @@ def respond(user_input):
 
 # Example usage
 while True:
-    user_input = input("You: ")
+    user_input = listen()
     bot_response = respond(user_input)
     print("Chatbot:", bot_response)
