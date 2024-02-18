@@ -1,3 +1,4 @@
+#welcome to our chatbot
 import random
 import nltk
 from patterns import pattern
