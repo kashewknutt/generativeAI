@@ -5,7 +5,7 @@ Despite increasing awareness and efforts to address mental health issues, a sign
 
 In this context, there is a pressing need for innovative solutions that can bridge the gap in mental health support services, particularly in areas where resources are scarce or inaccessible. One potential solution lies in leveraging artificial intelligence (AI) technology, specifically generative chatbots, to provide accessible and personalized mental health support to individuals.
 
-**The problem statement for this project is to develop a generative AI chatbot that functions as a virtual psychologist, offering tailored solutions and support to individuals experiencing mental health challenges. The chatbot will utilize datasets comprising various psychological frameworks, therapy techniques, and mental health resources to provide empathetic and effective guidance to users.**
+**The objective for this project is to develop a generative AI chat-bot that functions as a virtual psychologist, offering empathy and support to individuals experiencing mental health challenges. The chat-bot will utilise datasets comprising various psychological frameworks, therapy techniques, and mental health resources to correctly assess the current mental state of the patient and respond accordingly.**
 
 Key objectives of the project include:
 
