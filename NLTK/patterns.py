@@ -209,5 +209,61 @@ def pattern():
                 "You don't have to face this alone. Let's discuss ways to navigate through the challenges of illness together. What support or information would be most helpful for you right now?"
             ]
         },
+        {
+            "pattern": "I've been feeling really anxious lately. It's affecting my daily life.",
+            "responses": [
+                "I'm sorry to hear that you're experiencing anxiety. It's important to acknowledge your feelings. Is there a specific trigger, or would you like to discuss coping strategies?",
+                "Anxiety can be challenging. Taking deep breaths or trying mindfulness exercises might help. What else is on your mind?"
+            ]
+        },
+        {
+            "pattern": "I've been feeling down and unmotivated for weeks.",
+            "responses": [
+                "I'm sorry you're feeling this way. It's essential to reach out for support. Have you considered talking to a friend or seeking professional help?",
+                "Feeling down is tough. Let's explore activities that usually bring you joy. If it persists, considering professional assistance is a good option."
+            ]
+        },
+        {
+            "pattern": "I've been feeling so lonely lately. It's hard to connect with others.",
+            "responses": [
+                "Loneliness can be challenging. Connecting with friends or joining social activities might help. Is there something specific making it hard for you to connect?",
+                "Feeling alone is tough, but you're not alone in this. Let's discuss ways to foster connections. What interests or hobbies could you explore?"
+            ]
+        },
+        {
+            "pattern": "Work has been overwhelming, and I'm feeling a lot of stress.",
+            "responses": [
+                "I'm sorry to hear about the stress at work. Identifying specific stressors and finding ways to manage them is crucial. What aspects are causing the most pressure?",
+                "Work-related stress is common. Prioritizing tasks and incorporating breaks can help. What strategies have you tried, and what do you find challenging?"
+            ]
+        },
+        {
+            "pattern": "I often doubt my abilities and feel like I'm not good enough.",
+            "responses": [
+                "Self-doubt is something many people experience. Let's explore your strengths and achievements. What positive qualities do you often overlook?",
+                "Feeling unsure about yourself is common. Acknowledging your accomplishments and setting realistic goals can boost confidence. What achievements are you proud of?"
+            ]
+        },
+        {
+            "pattern": "I recently lost someone close, and I'm struggling with grief.",
+            "responses": [
+                "I'm so sorry for your loss. Grieving is a unique journey. Is there anything specific you'd like to share about the person you're mourning?",
+                "Dealing with grief is challenging. Sharing memories and expressing your feelings can be therapeutic. How would you like to remember your loved one?"
+            ]
+        },
+        {
+            "pattern": "I find it hard to say no, and I'm struggling with setting boundaries.",
+            "responses": [
+                "Setting boundaries is important for your well-being. Let's discuss specific situations where saying no feels difficult. What challenges do you face in this area?",
+                "Establishing boundaries is a skill that takes practice. What situations or relationships make it challenging for you to set clear boundaries?"
+            ]
+        },
+        {
+            "pattern": "I feel burned out and exhausted from work and responsibilities.",
+            "responses": [
+                "Burnout is a real challenge. Taking breaks and incorporating self-care activities are essential. What aspects of your life could use more support or adjustments?",
+                "Your well-being is important. Let's explore ways to balance your responsibilities and prioritize self-care. What activities usually help you relax?"
+            ]
+        },
     ]
     return patterns
