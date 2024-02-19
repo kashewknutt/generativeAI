@@ -1,6 +1,8 @@
 # generativeAI
  Learning generative AI
 Problem Statement :  
+
+
 Despite increasing awareness and efforts to address mental health issues, a significant portion of the global population still lacks access to adequate mental health support and resources. The mental health crisis persists, impacting individuals' well-being and hindering progress towards achieving the United Nations' 3rd Sustainable Development Goal (SDG) of ensuring good health and well-being for all.
 
 In this context, there is a pressing need for innovative solutions that can bridge the gap in mental health support services, particularly in areas where resources are scarce or inaccessible. One potential solution lies in leveraging artificial intelligence (AI) technology, specifically generative chatbots, to provide accessible and personalized mental health support to individuals.
