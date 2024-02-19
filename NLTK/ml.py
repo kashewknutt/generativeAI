@@ -6,9 +6,8 @@ import random
 
 patterns = pattern()
 
-user_input = [entry["pattern"] for entry in patterns]
+user_input = [" ".join(entry["pattern"]) for entry in patterns]
 bot_output = [entry["responses"] for entry in patterns]
-
 
 vectorizer = TfidfVectorizer()
 X = vectorizer.fit_transform(user_input)
@@ -26,7 +25,7 @@ while True:
     predicted_responses_binary = classifier.predict(input_vectorized)
     predicted_responses = mlb.inverse_transform(predicted_responses_binary)
     #print(predicted_responses)
-    if predicted_responses:
+    if predicted_responses and predicted_responses[0]:
         bot_response = random.choice(predicted_responses[0])
     else:
         bot_response = "I couldn't get that"

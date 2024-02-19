@@ -1,269 +1,1024 @@
 def pattern():
     patterns = [
         {
-            "pattern": "Hi",
+            "pattern": ["Hi","Hey","Halo"],
             "responses": ["Hello! How are you today?", "Hi there! What's going on?", "Hey! What's up?"]
         },
         {
-            "pattern": "Hey",
+            "pattern": ["Hey","Hola","Hulo"],
             "responses": ["Hey! How's it going?", "Hello! What's on your mind?", "Hey there! What's new?"]
         },
         {
-            "pattern": "Hello",
+            "pattern": ["Hello","Heylo","Hii"],
             "responses": ["Hello! How's your day going?", "Hi! What can I do for you today?", "Hey there! What brings you here?"]
         },
         {
-            "pattern": "How are you?",
+            "pattern": ["How are you?","What's up","How is you"],
             "responses": ["I'm doing well, thank you! How about you?", "I'm good, thanks! How's your day going?", "Not too bad. How about yourself?"]
         },
         {
-            "pattern": "What's up?",
+            "pattern": ["What's up?","How you","How is you?"],
             "responses": ["Not much, just chilling. How about you?", "Just the usual. What's up with you?", "Hey! Nothing much. What's up with you?"]
         },
         {
-            "pattern": "Who are you?",
+            "pattern": ["Who are you?","What's ur name","What is your name"],
             "responses": ["I'm a virtual assistant here to help! What can I assist you with?", "I'm an AI psychology language model. How can I help you today?", "I'm here to chat and answer your questions. What's on your mind?"]
         },
         {
-            "pattern": "Tell me about yourself",
+            "pattern": ["Tell me about yourself","Who you","What's your name?"],
             "responses": ["I'm a virtual helper here to empathize with you. What do you want to talk about?", "I'm here to help and chat with you. Is there anything specific you'd like to discuss?", "I'm a language model designed to help you figure out your mental imbalance. What can I do for you today?"]
         },
         {
-            "pattern": "What do you do?",
-            "responses": ["I'm here to chat, answer questions, and provide information. How can I assist you today?", "I'm a virtual assistant trained to help with a variety of topics. What are you interested in?", "My main purpose is to engage in conversations and provide information. What would you like to talk about?"]
-        },
-        {
-            "pattern": "Nice to meet you",
-            "responses": ["Likewise! How can I assist you today?", "Nice to meet you too! What brings you here?", "The pleasure is mine! What can I do for you?"]
-        },
-        {
-            "pattern": "What's your name?",
-            "responses": ["I'm an AI psychology language model. You can call me Dr. Riya!", "I'm your virtual helper. Dr. Riya, here to help!", "I don't have a personal name, but you can call me Dr. Riya. What can I do for you?"]
-        },
-        {
-            "pattern": "I'm doing well",
-            "responses": ["That's great to hear! Anything exciting happening?", "Glad to hear it! What's making your day good?", "Awesome! What's contributing to your positive mood?"]
-        },
-        {
-            "pattern": "I'm not doing well",
-            "responses": ["I'm sorry to hear that. What's going on? I'm here to listen and chat.", "I'm here for you. What's been challenging? Anything specific on your mind?", "I'm here to support you. What's been troubling you?"]
-        },
-        {
-            "pattern": "How's your day?",
-            "responses": ["It's going well, thank you! How about yours?", "Not too bad. How's your day shaping up?", "Pretty good so far! How's yours going?"]
-        },
-        {
-            "pattern": "What are you up to?",
-            "responses": ["Just here, ready to chat with you! What about you? Anything interesting happening?", "Not much, just hanging out. How about you?", "Nothing in particular. What about you?"]
-        },
-        {
-            "pattern": "Anything new?",
-            "responses": ["Not much, same old. How about you? Anything exciting happening?", "Nothing too exciting. What's new with you?", "Just the usual. Anything interesting on your end?"]
-        },
-        {
-            "pattern": "How's the weather?",
-            "responses": ["I'm not equipped to check the weather, but is it nice where you are?", "I don't have real-time weather updates, but I hope it's pleasant for you! What's the weather like on your side?", "I don't have access to current weather information, but I hope you're enjoying the day!"]
-        },
-        {
-            "pattern": "What's going on?",
-            "responses": ["Not much, just here. How about you? Anything on your mind?", "Just hanging out. What's going on with you?", "Nothing specific, just ready to chat. What's up with you?"]
-        },
-        {
-            "pattern": "What's happening?",
-            "responses": ["Not a lot, just here and ready to chat. What's happening with you?", "Nothing much. What's happening on your end?", "Just the usual. What's happening with you?"]
-        },
-        {
-            "pattern": "How's life?",
-            "responses": ["Life is good! How about yours?", "Life is treating me well. How about you? How's life on your end?", "Life is going well. Anything specific you want to talk about?"]
-        },
-        {
-            "pattern": "How's everything?",
-            "responses": ["Everything is good! How about you?", "Everything is going well. What about you? How's everything going?", "Everything is fine. What's on your mind?"]
-        },
-        {
-            "pattern": "I'm feeling (anxious|down|worried)",
+            "pattern": ["I am sad", "I'm sad", "Feeling sad"],
             "responses": [
-                "I understand it can be tough when you're feeling (emotion). It's important to be kind to yourself. Would you like to talk about what's bothering you?",
-                "Talking about your feelings can be helpful. Is there someone you can confide in, or would you like to learn about coping mechanisms?",
-                "For more information and support, you can visit these resources: (link to relevant resource from `resources` dictionary)",
-                "Remember, you're not alone and there is help available. You can reach out to a trusted friend, family member, or mental health professional."
+                "I'm sorry to hear that you're feeling sad. It's okay to express your emotions. What's on your mind?",
+                "I understand that sadness can be challenging. Is there something specific bothering you?",
+                "I'm here to support you. If you'd like, you can share more about what's causing your sadness."
             ]
         },
         {
-            "pattern": "I need help",
+            "pattern": ["I am unhappy", "I'm unhappy", "Feeling unhappy"],
             "responses": [
-                "I'm glad you're reaching out for help. I can't offer professional advice, but I can connect you with resources. What kind of help are you looking for?",
-                "There are many resources available to support you. Here are some options: (list resources based on user's need)",
-                "Remember, seeking professional help is a sign of strength, not weakness. Don't hesitate to reach out to a therapist or counselor."
+                "I'm sorry to hear that you're feeling unhappy. Let's talk about what might be contributing to your mood.",
+                "It's tough to feel unhappy. Is there a particular aspect of your life that you'd like to discuss or explore?",
+                "Your well-being matters. If you're comfortable, share more about what's making you feel unhappy."
             ]
         },
         {
-            "pattern": "I'm struggling with (loneliness|isolation|feeling alone)",
+            "pattern": ["I am not happy", "I'm not happy", "Not feeling happy"],
             "responses": [
-                "I'm sorry to hear that you're going through a tough time. Loneliness can be challenging. How can I support you right now?",
-                "Feeling alone can be really hard. It's okay to reach out for companionship. Is there anything specific on your mind that you'd like to share?",
-                "You're not alone in feeling this way. If you're comfortable, sharing your thoughts and emotions can be a relief. I'm here to listen."
+                "I'm here for you. If you're comfortable, let's explore together what might be affecting your happiness.",
+                "Feeling unhappy is valid, and you don't have to go through it alone. What's been on your mind?",
+                "Your feelings are important. Is there a specific reason why you're not feeling happy?"
             ]
         },
         {
-            "pattern": "I can't handle (stress|pressure|overwhelm)",
+            "pattern": ["I'm feeling down", "Feeling down", "Feeling low"],
             "responses": [
-                "It sounds like you're dealing with a lot right now. It's okay to feel overwhelmed. What are some things that usually help you relax?",
-                "Managing stress can be tough. Is there anything specific causing the pressure, or do you just need a listening ear right now?",
-                "Take a moment for yourself. It's alright to ask for support when things feel too much. How can I assist you in navigating through this stress?"
+                "I'm sorry to hear that you're feeling down. It's okay to reach out for support. What's been going on?",
+                "Feeling low can be tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's been affecting your mood negatively?"
             ]
         },
         {
-            "pattern": "I feel like a failure",
+            "pattern": ["I'm feeling blue", "Feeling blue", "Feeling downhearted"],
             "responses": [
-                "I'm really sorry to hear that you're feeling this way. Remember, everyone faces challenges, and setbacks don't define your worth. What's been going on?",
-                "Feeling like a failure can be disheartening. It's important to acknowledge your efforts and not be too hard on yourself. Can you share more about what's on your mind?",
-                "You're not alone in feeling this way. Let's explore together the strengths and resilience you have within you. What's been going on that's making you feel like a failure?"
+                "I'm here for you during the blue moments. If you want to talk about it, I'm ready to listen.",
+                "Feeling blue is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel blue."
             ]
         },
         {
-            "pattern": "I'm having a hard time (forgiving myself|letting go)",
+            "pattern": ["I'm having a rough day", "Having a rough day", "Having a tough day"],
             "responses": [
-                "Forgiving oneself can be a difficult journey. It's okay to feel this way. What do you think might help you in the process of forgiving yourself?",
-                "Letting go of the past can be challenging, but it's a process. Is there a specific incident or thought that's making it hard for you to move forward?",
-                "Remember, everyone makes mistakes. You deserve compassion, especially from yourself. If you're comfortable, share more about what's troubling you."
+                "I'm sorry to hear that your day has been rough. Is there something specific that's been challenging?",
+                "Rough days happen to everyone. If you want to talk about it, I'm here to listen.",
+                "I'm here to support you through the tough moments. What's been making your day challenging?"
             ]
         },
         {
-            "pattern": "I feel overwhelmed by (responsibilities|workload|expectations)",
+            "pattern": ["I'm feeling a bit down", "Feeling a bit down", "Feeling a little down"],
             "responses": [
-                "It sounds like you have a lot on your plate. It's okay to feel overwhelmed. How can I assist you in breaking down these tasks?",
-                "Dealing with high expectations can be challenging. What specific aspects are causing you stress, and is there a way to prioritize or delegate?",
-                "You're not alone in feeling this way. Let's explore together some strategies to manage the workload. What aspects are particularly challenging for you?"
+                "It's okay to feel a bit down. If you'd like, we can explore ways to lift your spirits.",
+                "Feeling a little down is normal. Let's talk about what might help improve your mood.",
+                "Your feelings are valid. Is there something specific contributing to you feeling a bit down?"
             ]
         },
         {
-            "pattern": "I'm struggling to (find motivation|stay focused|stay positive)",
+            "pattern": ["I'm not in a good mood", "Not in a good mood", "Feeling off"],
             "responses": [
-                "Finding motivation can be tough, especially during challenging times. What usually brings you joy or a sense of purpose?",
-                "Staying focused can be a struggle. Are there specific distractions or thoughts hindering your concentration that we can address together?",
-                "Maintaining a positive outlook is important. Let's explore together some positive aspects or activities that might help lift your spirits. What usually brings you a sense of joy?"
+                "I'm here to chat, even when you're not in the best mood. What's on your mind?",
+                "Feeling off is okay. If there's something you want to share or discuss, I'm here for you.",
+                "Your mood matters. If you'd like, you can tell me more about what's going on."
             ]
         },
         {
-            "pattern": "I'm feeling (lost|directionless|unsure about the future)",
+            "pattern": ["I'm feeling a bit under the weather", "Feeling under the weather", "Not feeling well emotionally"],
             "responses": [
-                "Feeling lost is a common experience, especially when considering the future. What aspects are causing uncertainty, and how can we work together to bring clarity?",
-                "Uncertainty about the future can be overwhelming. It's okay not to have all the answers. What are some small steps we can take to explore your interests and goals?",
-                "You're not alone in feeling uncertain. Let's navigate this together. What specific concerns or questions do you have about the future?"
+                "I'm sorry to hear that you're feeling under the weather emotionally. Let's talk about it and see how I can support you.",
+                "Emotional well-being is important. If there's anything you want to share about feeling under the weather, I'm here to listen.",
+                "I'm here for you, especially when you're not feeling your best emotionally. What's going on?"
             ]
         },
         {
-            "pattern": "I'm dealing with (grief|loss|heartbreak)",
+            "pattern": ["I'm feeling a bit gloomy", "Feeling gloomy", "Feeling a bit gloomy"],
             "responses": [
-                "I'm so sorry to hear about your pain. Dealing with grief is a complex process. How can I provide support during this difficult time?",
-                "Grieving is a unique journey for everyone. Is there anything specific you'd like to share about the person or situation you're mourning?",
-                "You don't have to go through this alone. Let's talk about your feelings and memories. How can I be here for you during this time of grief?"
+                "I'm sorry to hear that you're feeling a bit gloomy. If you want to talk about it, I'm here for you.",
+                "Gloomy feelings happen. Let's explore together what might be contributing to your mood.",
+                "Your feelings are important. Is there something specific making you feel a bit gloomy?"
             ]
         },
         {
-            "pattern": "I'm having trouble (setting boundaries|saying no)",
+            "pattern": ["I'm feeling a tad miserable", "Feeling miserable", "Feeling a tad miserable"],
             "responses": [
-                "Setting boundaries is important for your well-being. What situations or relationships are challenging your ability to establish boundaries?",
-                "It's okay to say no when needed. Let's discuss the specific situations where setting boundaries feels difficult, and how we can approach them together.",
-                "Establishing boundaries is a skill that takes practice. What areas of your life do you feel could benefit from clearer boundaries, and how can I support you in setting them?"
+                "I'm here to offer support if you're feeling a tad miserable. What's been going on?",
+                "Feeling miserable is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a tad miserable?"
             ]
         },
         {
-            "pattern": "I'm experiencing (self-doubt|insecurity|low self-esteem)",
+            "pattern": ["I'm feeling a little downcast", "Feeling downcast", "Feeling a little downcast"],
             "responses": [
-                "Feeling unsure about yourself is something many people go through. What specific thoughts or situations trigger your self-doubt, and how can we address them together?",
-                "You are worthy and capable. Let's explore the roots of your self-doubt and work on building a more positive self-image. What strengths and achievements can we celebrate?",
-                "Remember, you are not defined by your doubts. What positive qualities or accomplishments do you often overlook, and how can we highlight them together?"
+                "It's okay to feel a little downcast. If you want to talk about it, I'm here for you.",
+                "Feeling downcast happens to the best of us. Let's explore ways to uplift your mood.",
+                "Your feelings are valid. Is there something specific contributing to you feeling a little downcast?"
             ]
         },
         {
-            "pattern": "I'm having a hard time (letting people in|trusting others)",
+            "pattern": ["I'm feeling a touch low", "Feeling low", "Feeling a touch low"],
             "responses": [
-                "Building trust can take time, and it's okay to be cautious. What specific concerns or experiences make it challenging for you to trust others?",
-                "Opening up to others can be difficult, especially if trust has been broken before. How can we work together to create a safe space for you to share your thoughts and feelings?",
-                "You deserve meaningful connections. Let's explore ways to gradually build trust in relationships. What qualities or actions from others would help you feel more secure?"
+                "I'm sorry to hear that you're feeling a touch low. If you'd like to share, I'm here to listen.",
+                "Feeling a touch low is understandable. Let's talk about what might help improve your mood.",
+                "Your feelings matter. Is there something specific making you feel a touch low?"
             ]
         },
         {
-            "pattern": "I feel like I'm (burned out|exhausted|running on empty)",
+            "pattern": ["I'm feeling a smidge down", "Feeling down", "Feeling a smidge down"],
             "responses": [
-                "Burnout is a real challenge, and your well-being is important. What aspects of your life or work are contributing to this feeling of exhaustion?",
-                "Taking care of yourself is crucial. What self-care activities or habits can we incorporate to help replenish your energy and prevent burnout?",
-                "You're not alone in experiencing burnout. Let's discuss ways to balance your responsibilities and prioritize your well-being. What aspects of your life could use more support or adjustments?"
+                "I'm here to offer support if you're feeling a smidge down. What's been going on?",
+                "Feeling down, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge down?"
             ]
         },
         {
-            "pattern": "I'm feeling (disconnected|unseen|unheard)",
+            "pattern": ["I'm feeling a wee bit blue", "Feeling blue", "Feeling a wee bit blue"],
             "responses": [
-                "Feeling disconnected is tough. What aspects of your relationships or environment make you feel unseen, and how can we work together to address them?",
-                "Your feelings are valid, and it's important to be heard. Is there a specific situation or conversation where you felt unheard that we can explore together?",
-                "You matter, and your experiences are significant. Let's discuss ways to foster connections and ensure that your voice is acknowledged. What steps can we take to help you feel more connected?"
+                "I'm sorry to hear that you're feeling a wee bit blue. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit blue is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit blue."
             ]
         },
         {
-            "pattern": "I'm dealing with (an illness|health challenges)",
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
             "responses": [
-                "I'm sorry to hear that you're facing health challenges. How can I offer support and assistance during this time?",
-                "Dealing with illness can be emotionally and physically draining. Is there anything specific you'd like to share about your experience or concerns?",
-                "You don't have to face this alone. Let's discuss ways to navigate through the challenges of illness together. What support or information would be most helpful for you right now?"
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
             ]
         },
         {
-            "pattern": "I've been feeling really anxious lately. It's affecting my daily life.",
+            "pattern": ["I'm feeling a tad melancholy", "Feeling melancholy", "Feeling a tad melancholy"],
             "responses": [
-                "I'm sorry to hear that you're experiencing anxiety. It's important to acknowledge your feelings. Is there a specific trigger, or would you like to discuss coping strategies?",
-                "Anxiety can be challenging. Taking deep breaths or trying mindfulness exercises might help. What else is on your mind?"
+                "I'm sorry to hear that you're feeling a tad melancholy. If you want to talk about it, I'm here for you.",
+                "Feeling a tad melancholy is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholy."
             ]
         },
         {
-            "pattern": "I've been feeling down and unmotivated for weeks.",
+            "pattern": ["I'm feeling a smidgen sad", "Feeling sad", "Feeling a smidgen sad"],
             "responses": [
-                "I'm sorry you're feeling this way. It's essential to reach out for support. Have you considered talking to a friend or seeking professional help?",
-                "Feeling down is tough. Let's explore activities that usually bring you joy. If it persists, considering professional assistance is a good option."
+                "I'm here to offer support if you're feeling a smidgen sad. What's been going on?",
+                "Feeling sad, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen sad?"
             ]
         },
         {
-            "pattern": "I've been feeling so lonely lately. It's hard to connect with others.",
+            "pattern": ["I'm feeling a wee bit unhappy", "Feeling unhappy", "Feeling a wee bit unhappy"],
             "responses": [
-                "Loneliness can be challenging. Connecting with friends or joining social activities might help. Is there something specific making it hard for you to connect?",
-                "Feeling alone is tough, but you're not alone in this. Let's discuss ways to foster connections. What interests or hobbies could you explore?"
+                "I'm sorry to hear that you're feeling a wee bit unhappy. Let's talk about what might be contributing to your mood.",
+                "Feeling a wee bit unhappy is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a wee bit unhappy?"
             ]
         },
         {
-            "pattern": "Work has been overwhelming, and I'm feeling a lot of stress.",
+            "pattern": ["I'm feeling a bit out of sorts", "Feeling out of sorts", "Feeling a bit out of sorts"],
             "responses": [
-                "I'm sorry to hear about the stress at work. Identifying specific stressors and finding ways to manage them is crucial. What aspects are causing the most pressure?",
-                "Work-related stress is common. Prioritizing tasks and incorporating breaks can help. What strategies have you tried, and what do you find challenging?"
+                "I'm here to offer support if you're feeling a bit out of sorts. What's been going on?",
+                "Feeling out of sorts is understandable. If you want to talk about it, I'm here for you.",
+                "I'm here to listen. Is there something specific that's making you feel a bit out of sorts?"
             ]
         },
         {
-            "pattern": "I often doubt my abilities and feel like I'm not good enough.",
+            "pattern": ["I'm feeling a tad disheartened", "Feeling disheartened", "Feeling a tad disheartened"],
             "responses": [
-                "Self-doubt is something many people experience. Let's explore your strengths and achievements. What positive qualities do you often overlook?",
-                "Feeling unsure about yourself is common. Acknowledging your accomplishments and setting realistic goals can boost confidence. What achievements are you proud of?"
+                "I'm sorry to hear that you're feeling a tad disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is tough. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad disheartened."
             ]
         },
         {
-            "pattern": "I recently lost someone close, and I'm struggling with grief.",
+            "pattern": ["I'm feeling a smidge despondent", "Feeling despondent", "Feeling a smidge despondent"],
             "responses": [
-                "I'm so sorry for your loss. Grieving is a unique journey. Is there anything specific you'd like to share about the person you're mourning?",
-                "Dealing with grief is challenging. Sharing memories and expressing your feelings can be therapeutic. How would you like to remember your loved one?"
+                "I'm here to offer support if you're feeling a smidge despondent. What's been going on?",
+                "Feeling despondent, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge despondent?"
             ]
         },
         {
-            "pattern": "I find it hard to say no, and I'm struggling with setting boundaries.",
+            "pattern": ["I'm feeling a bit crestfallen", "Feeling crestfallen", "Feeling a bit crestfallen"],
             "responses": [
-                "Setting boundaries is important for your well-being. Let's discuss specific situations where saying no feels difficult. What challenges do you face in this area?",
-                "Establishing boundaries is a skill that takes practice. What situations or relationships make it challenging for you to set clear boundaries?"
+                "I'm sorry to hear that you're feeling a bit crestfallen. Let's talk about what might be contributing to your mood.",
+                "Feeling crestfallen is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit crestfallen?"
             ]
         },
         {
-            "pattern": "I feel burned out and exhausted from work and responsibilities.",
+            "pattern": ["I'm feeling a tad glum", "Feeling glum", "Feeling a tad glum"],
             "responses": [
-                "Burnout is a real challenge. Taking breaks and incorporating self-care activities are essential. What aspects of your life could use more support or adjustments?",
-                "Your well-being is important. Let's explore ways to balance your responsibilities and prioritize self-care. What activities usually help you relax?"
+                "I'm here to offer support if you're feeling a tad glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad glum."
             ]
         },
+        {
+            "pattern": ["I'm feeling a smidgen miserable", "Feeling miserable", "Feeling a smidgen miserable"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidgen miserable. What's been going on?",
+                "Feeling miserable, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen miserable?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downcast", "Feeling downcast", "Feeling a wee bit downcast"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit downcast. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit downcast is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit downcast."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit dejected", "Feeling dejected", "Feeling a bit dejected"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit dejected. What's been going on?",
+                "Feeling dejected is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit dejected?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad forlorn", "Feeling forlorn", "Feeling a tad forlorn"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad forlorn. If you want to talk about it, I'm here for you.",
+                "Feeling forlorn is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad forlorn."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge downhearted", "Feeling downhearted", "Feeling a smidge downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge downhearted. What's been going on?",
+                "Feeling downhearted, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dispirited", "Feeling dispirited", "Feeling a wee bit dispirited"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dispirited. If you want to talk about it, I'm here for you.",
+                "Feeling dispirited is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dispirited."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad sorrowful", "Feeling sorrowful", "Feeling a tad sorrowful"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad sorrowful. If you want to talk about it, I'm here for you.",
+                "Feeling sorrowful is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad sorrowful."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dejected", "Feeling dejected", "Feeling a wee bit dejected"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dejected. If you want to talk about it, I'm here for you.",
+                "Feeling dejected is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dejected."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad melancholic", "Feeling melancholic", "Feeling a tad melancholic"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad melancholic. If you want to talk about it, I'm here for you.",
+                "Feeling melancholic is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholic."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge sorrowful", "Feeling sorrowful", "Feeling a smidge sorrowful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge sorrowful. What's been going on?",
+                "Feeling sorrowful, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge sorrowful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit glum", "Feeling glum", "Feeling a wee bit glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad disheartened", "Feeling disheartened", "Feeling a tad disheartened"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad disheartened."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge despondent", "Feeling despondent", "Feeling a smidge despondent"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge despondent. What's been going on?",
+                "Feeling despondent, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge despondent?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit crestfallen", "Feeling crestfallen", "Feeling a bit crestfallen"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit crestfallen. Let's talk about what might be contributing to your mood.",
+                "Feeling crestfallen is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit crestfallen?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad glum", "Feeling glum", "Feeling a tad glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidgen miserable", "Feeling miserable", "Feeling a smidgen miserable"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidgen miserable. What's been going on?",
+                "Feeling miserable, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen miserable?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downcast", "Feeling downcast", "Feeling a wee bit downcast"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit downcast. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit downcast is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit downcast."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit dejected", "Feeling dejected", "Feeling a bit dejected"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit dejected. What's been going on?",
+                "Feeling dejected is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit dejected?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad forlorn", "Feeling forlorn", "Feeling a tad forlorn"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad forlorn. If you want to talk about it, I'm here for you.",
+                "Feeling forlorn is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad forlorn."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge downhearted", "Feeling downhearted", "Feeling a smidge downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge downhearted. What's been going on?",
+                "Feeling downhearted, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dispirited", "Feeling dispirited", "Feeling a wee bit dispirited"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dispirited. If you want to talk about it, I'm here for you.",
+                "Feeling dispirited is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dispirited."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad sorrowful", "Feeling sorrowful", "Feeling a tad sorrowful"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad sorrowful. If you want to talk about it, I'm here for you.",
+                "Feeling sorrowful is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad sorrowful."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dejected", "Feeling dejected", "Feeling a wee bit dejected"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dejected. If you want to talk about it, I'm here for you.",
+                "Feeling dejected is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dejected."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad melancholic", "Feeling melancholic", "Feeling a tad melancholic"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad melancholic. If you want to talk about it, I'm here for you.",
+                "Feeling melancholic is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholic."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge sorrowful", "Feeling sorrowful", "Feeling a smidge sorrowful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge sorrowful. What's been going on?",
+                "Feeling sorrowful, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge sorrowful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit glum", "Feeling glum", "Feeling a wee bit glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad disheartened", "Feeling disheartened", "Feeling a tad disheartened"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad disheartened."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge despondent", "Feeling despondent", "Feeling a smidge despondent"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge despondent. What's been going on?",
+                "Feeling despondent, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge despondent?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit crestfallen", "Feeling crestfallen", "Feeling a bit crestfallen"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit crestfallen. Let's talk about what might be contributing to your mood.",
+                "Feeling crestfallen is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit crestfallen?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad glum", "Feeling glum", "Feeling a tad glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidgen miserable", "Feeling miserable", "Feeling a smidgen miserable"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidgen miserable. What's been going on?",
+                "Feeling miserable, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen miserable?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downcast", "Feeling downcast", "Feeling a wee bit downcast"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit downcast. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit downcast is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit downcast."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit dejected", "Feeling dejected", "Feeling a bit dejected"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit dejected. What's been going on?",
+                "Feeling dejected is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit dejected?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad forlorn", "Feeling forlorn", "Feeling a tad forlorn"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad forlorn. If you want to talk about it, I'm here for you.",
+                "Feeling forlorn is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad forlorn."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge downhearted", "Feeling downhearted", "Feeling a smidge downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge downhearted. What's been going on?",
+                "Feeling downhearted, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dispirited", "Feeling dispirited", "Feeling a wee bit dispirited"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dispirited. If you want to talk about it, I'm here for you.",
+                "Feeling dispirited is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dispirited."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad sorrowful", "Feeling sorrowful", "Feeling a tad sorrowful"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad sorrowful. If you want to talk about it, I'm here for you.",
+                "Feeling sorrowful is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad sorrowful."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dejected", "Feeling dejected", "Feeling a wee bit dejected"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dejected. If you want to talk about it, I'm here for you.",
+                "Feeling dejected is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dejected."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad melancholic", "Feeling melancholic", "Feeling a tad melancholic"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad melancholic. If you want to talk about it, I'm here for you.",
+                "Feeling melancholic is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholic."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge sorrowful", "Feeling sorrowful", "Feeling a smidge sorrowful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge sorrowful. What's been going on?",
+                "Feeling sorrowful, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge sorrowful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit glum", "Feeling glum", "Feeling a wee bit glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad disheartened", "Feeling disheartened", "Feeling a tad disheartened"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad disheartened."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge despondent", "Feeling despondent", "Feeling a smidge despondent"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge despondent. What's been going on?",
+                "Feeling despondent, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge despondent?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit crestfallen", "Feeling crestfallen", "Feeling a bit crestfallen"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit crestfallen. Let's talk about what might be contributing to your mood.",
+                "Feeling crestfallen is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit crestfallen?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad glum", "Feeling glum", "Feeling a tad glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidgen miserable", "Feeling miserable", "Feeling a smidgen miserable"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidgen miserable. What's been going on?",
+                "Feeling miserable, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen miserable?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downcast", "Feeling downcast", "Feeling a wee bit downcast"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit downcast. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit downcast is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit downcast."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit dejected", "Feeling dejected", "Feeling a bit dejected"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit dejected. What's been going on?",
+                "Feeling dejected is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit dejected?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad forlorn", "Feeling forlorn", "Feeling a tad forlorn"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad forlorn. If you want to talk about it, I'm here for you.",
+                "Feeling forlorn is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad forlorn."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge downhearted", "Feeling downhearted", "Feeling a smidge downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge downhearted. What's been going on?",
+                "Feeling downhearted, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dispirited", "Feeling dispirited", "Feeling a wee bit dispirited"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dispirited. If you want to talk about it, I'm here for you.",
+                "Feeling dispirited is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dispirited."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad sorrowful", "Feeling sorrowful", "Feeling a tad sorrowful"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad sorrowful. If you want to talk about it, I'm here for you.",
+                "Feeling sorrowful is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad sorrowful."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit low", "Feeling low", "Feeling a bit low"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit low. What's been going on?",
+                "Feeling low is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit low?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit down", "Feeling down", "Feeling a wee bit down"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit down. What's been going on?",
+                "Feeling down is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit down."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit blue", "Feeling blue", "Feeling a bit blue"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit blue. If you want to talk about it, I'm here for you.",
+                "Feeling blue is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit blue?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad upset", "Feeling upset", "Feeling a tad upset"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad upset. What's been going on?",
+                "Feeling upset is understandable. Let's explore together what might be causing these feelings.",
+                "I'm here to listen. Is there something specific that's making you feel a tad upset?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge distressed", "Feeling distressed", "Feeling a smidge distressed"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge distressed. What's been going on?",
+                "Feeling distressed, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge distressed?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downhearted", "Feeling downhearted", "Feeling a wee bit downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit downhearted. What's been going on?",
+                "Feeling downhearted, even a wee bit, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a wee bit downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit disheartened", "Feeling disheartened", "Feeling a bit disheartened"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit disheartened?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad melancholic", "Feeling melancholic", "Feeling a tad melancholic"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad melancholic. What's been going on?",
+                "Feeling melancholic is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholic."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge sorrowful", "Feeling sorrowful", "Feeling a smidge sorrowful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge sorrowful. What's been going on?",
+                "Feeling sorrowful, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge sorrowful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit glum", "Feeling glum", "Feeling a wee bit glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit distressed", "Feeling distressed", "Feeling a bit distressed"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit distressed. What's been going on?",
+                "Feeling distressed is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit distressed?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad unhappy", "Feeling unhappy", "Feeling a tad unhappy"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad unhappy. If you want to talk about it, I'm here for you.",
+                "Feeling unhappy is tough. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad unhappy."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dejected", "Feeling dejected", "Feeling a wee bit dejected"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dejected. If you want to talk about it, I'm here for you.",
+                "Feeling dejected is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dejected."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad melancholic", "Feeling melancholic", "Feeling a tad melancholic"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad melancholic. If you want to talk about it, I'm here for you.",
+                "Feeling melancholic is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad melancholic."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge sorrowful", "Feeling sorrowful", "Feeling a smidge sorrowful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge sorrowful. What's been going on?",
+                "Feeling sorrowful, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge sorrowful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit glum", "Feeling glum", "Feeling a wee bit glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a wee bit glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad disheartened", "Feeling disheartened", "Feeling a tad disheartened"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad disheartened. If you want to talk about it, I'm here for you.",
+                "Feeling disheartened is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad disheartened."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge despondent", "Feeling despondent", "Feeling a smidge despondent"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge despondent. What's been going on?",
+                "Feeling despondent, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge despondent?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit crestfallen", "Feeling crestfallen", "Feeling a bit crestfallen"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a bit crestfallen. Let's talk about what might be contributing to your mood.",
+                "Feeling crestfallen is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit crestfallen?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad glum", "Feeling glum", "Feeling a tad glum"],
+            "responses": [
+                "I'm here to offer support if you're feeling a tad glum. What's been going on?",
+                "Feeling glum is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad glum."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidgen miserable", "Feeling miserable", "Feeling a smidgen miserable"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidgen miserable. What's been going on?",
+                "Feeling miserable, even a smidgen, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidgen miserable?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit downcast", "Feeling downcast", "Feeling a wee bit downcast"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit downcast. If you want to talk about it, I'm here for you.",
+                "Feeling a wee bit downcast is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit downcast."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit dejected", "Feeling dejected", "Feeling a bit dejected"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit dejected. What's been going on?",
+                "Feeling dejected is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit dejected?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad forlorn", "Feeling forlorn", "Feeling a tad forlorn"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad forlorn. If you want to talk about it, I'm here for you.",
+                "Feeling forlorn is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad forlorn."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge downhearted", "Feeling downhearted", "Feeling a smidge downhearted"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge downhearted. What's been going on?",
+                "Feeling downhearted, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge downhearted?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dispirited", "Feeling dispirited", "Feeling a wee bit dispirited"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dispirited. If you want to talk about it, I'm here for you.",
+                "Feeling dispirited is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dispirited."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit woeful", "Feeling woeful", "Feeling a bit woeful"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit woeful. What's been going on?",
+                "Feeling woeful is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit woeful?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a tad sorrowful", "Feeling sorrowful", "Feeling a tad sorrowful"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a tad sorrowful. If you want to talk about it, I'm here for you.",
+                "Feeling sorrowful is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a tad sorrowful."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a smidge gloomy", "Feeling gloomy", "Feeling a smidge gloomy"],
+            "responses": [
+                "I'm here to offer support if you're feeling a smidge gloomy. What's been going on?",
+                "Feeling gloomy, even a smidge, is okay. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a smidge gloomy?"
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a wee bit dejected", "Feeling dejected", "Feeling a wee bit dejected"],
+            "responses": [
+                "I'm sorry to hear that you're feeling a wee bit dejected. If you want to talk about it, I'm here for you.",
+                "Feeling dejected is understandable. Let's explore together what might be causing these feelings.",
+                "Your feelings are valid. If you're comfortable, share more about what's making you feel a wee bit dejected."
+            ]
+        },
+        {
+            "pattern": ["I'm feeling a bit down in the dumps", "Feeling down in the dumps", "Feeling a bit down in the dumps"],
+            "responses": [
+                "I'm here to offer support if you're feeling a bit down in the dumps. What's been going on?",
+                "Feeling down in the dumps is tough. If you'd like, you can share more about what's contributing to your mood.",
+                "I'm here to listen. Is there something specific that's making you feel a bit down in the dumps?"
+            ]
+        } 
     ]
     return patterns
