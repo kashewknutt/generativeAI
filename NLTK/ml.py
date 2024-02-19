@@ -21,8 +21,8 @@ classifier.fit(X, y)
 
 
 while True:
-    input = input("User: ")
-    input_vectorized = vectorizer.transform([input])
+    usrInput = input("User: ")
+    input_vectorized = vectorizer.transform([usrInput])
     predicted_responses_binary = classifier.predict(input_vectorized)
     predicted_responses = mlb.inverse_transform(predicted_responses_binary)
     #print(predicted_responses)
