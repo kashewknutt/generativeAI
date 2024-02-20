@@ -1,12 +1,12 @@
-from patterns import pattern
+#from patterns import pattern
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer
 import random
+from dataset import patterns
+patterns = patterns()
 
-patterns = pattern()
-
-user_input = [" ".join(entry["pattern"]) for entry in patterns]
+user_input = [entry["pattern"] for entry in patterns]
 bot_output = [entry["responses"] for entry in patterns]
 
 vectorizer = TfidfVectorizer()
