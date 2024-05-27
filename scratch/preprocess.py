@@ -39,22 +39,32 @@ def normalize_text(corpus):
     Returns:
     str: Processed text. (First layer of preprocessing)
     """
-    corpus = corpus.lower()  # Convert to lowercase
-    corpus = re.sub(r'[^a-zA-Z0-9\s]', '', corpus)  # Remove special characters
+
+    #convert to lowercase so that each character had equal meaning
+    corpus = corpus.lower() 
+
+    #a very clever way to remove weird characters 
+    corpus = re.sub(r'[^a-zA-Z0-9\s]', '', corpus)
     print("Normalization complete!")
     return corpus
 
 def tokenize_text(corpus):
     """
-    Tokenize the text using GPT-2 tokenizer.
+    Tokens are basically collections of 3-4 letters at a time. 
+    They like create modifiable and relatable data. 
+    i.e. data that can be used for inferences
     
     Parameters:
-    corpus (str): The input text.
+    corpus (str): The corpus we just processed and removed the wierd characters
     
     Returns:
-    List[int]: Tokenized text.
+    List[int]: A list of tokens. Waaaay smaller than the original corpus (Second layer of preprocessing: Tokernizing)
     """
+
+    #pre-existing transformer (encoder-decoder) model
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+
+    #Tokenize the corpus
     tokens = tokenizer.encode(corpus)
     print("Tokenization complete!")
     print("Number of tokens:", len(tokens))
@@ -62,27 +72,35 @@ def tokenize_text(corpus):
 
 def split_into_sequences(tokens, block_size=128):
     """
-    Split the tokenized text into sequences of fixed length.
+    This is where it gets interesting. the block size is how big a particular training sequence is required.
+    i.e. how many tokens will allocate in a sequence..
     
     Parameters:
-    tokens (List[int]): Tokenized text.
-    block_size (int): Length of each sequence.
+    tokens (List[int]): the tokens list we just created
+    block_size (int): how long each sequence should be
     
     Returns:
-    List[List[int]]: List of sequences.
+    List[List[int]]: The sequences of tokens. We will use these sequence (after pairing) to train. (Third layer of preprocessing)
     """
+
+    #Selects tokens every block size step till it reaches a point where no more blocks can be used the rest tokens are ignored for now
     sequences = [tokens[i:i+block_size] for i in range(0, len(tokens) - block_size + 1, block_size)]
+
+
     print("Splitting into sequences complete!")
     print("Number of sequences:", len(sequences))
     return sequences
 
 def save_preprocessed_data(sequences, output_file='tokenized_data.pt'):
     """
-    Save the preprocessed data to a file.
-    
+    Saving the data to a specific file.
+
     Parameters:
-    sequences (List[List[int]]): Preprocessed sequences.
+    sequences (List[List[int]]): Our token sequences list
     output_file (str): Path to the output file.
+
+    Returns:
+    Nothing
     """
     torch.save(sequences, output_file)
     print(f"Data saved to {output_file}!")
