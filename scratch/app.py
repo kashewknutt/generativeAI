@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 import torch
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer # type: ignore
 
 app = Flask(__name__)
 

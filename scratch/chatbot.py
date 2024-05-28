@@ -1,5 +1,5 @@
 import torch
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from transformers import GPT2LMHeadModel, GPT2Tokenizer # type: ignore
 
 # Load the model and tokenizer
 model = GPT2LMHeadModel.from_pretrained('./results/final_model')
