@@ -1,0 +1,11 @@
+Step1: python3 -m venv env
+activate
+pip install torch transformers fastapi uvicorn
+Step2: Collect Books (Data) for pretraining
+Step3: Preprocess the text
+3.1)Concatenate all books to one string
+3.2)Normalize (remove special chars)
+3.3)Tokenize (Create tokens using encoder models)
+3.4)Sequencing (Use a number of token to create one sequence. repeat)
+3.5)Save to a file so that training can use
+Step4: Train the model.
