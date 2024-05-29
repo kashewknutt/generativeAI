@@ -6,6 +6,8 @@ from transformers import GPT2Tokenizer
 
 def load_data_from_gz(file_path):
     data = []
+
+    #Preexisting function to handle the specially archived data in the google data folder
     with gzip.open(file_path, 'rt', encoding='utf-8') as f:
         for line in f:
             data.append(json.loads(line.strip()))
