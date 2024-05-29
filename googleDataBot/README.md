@@ -1,0 +1,1 @@
+Here I got access to a google data cloud open data set of 42 GBs that i will use to train my model
